@@ -10,9 +10,9 @@ from model import Model
 
 origin = "data.txt"
 destin = "sample.txt"
-for i in range(3):
+for i in range(1):
 	# execute data gathering
-	os.system("""python bitalino_hack.py /dev/tty.BITalino-39-96-DevB 10 "2;3;5" 100 10 ./"""+origin)
+	# os.system("""python bitalino_hack.py /dev/tty.BITalino-39-96-DevB 10 "2;3;5" 100 10 ./"""+origin)
 
 	# preprocess data
 	with open(origin, 'r') as fin:
@@ -37,10 +37,12 @@ for i in range(3):
 
 	print(result)
 
-	result[result > 0.5] = 1
-	result[result <= 0.5] = 0
+	result[result > 0.75] = 1
+	result[result <= 0.75] = 0
+
+	mr_doctor = {1: "Keep Calm and enjoy the Hackathon.", 0: "You seem to be doing well."}
 	# Es un array 1 element
-	print(result)
+	print(result, mr_doctor[int(np.sum(result))])
 
 # execute data gathering
 os.system("""curl -H "Content-Type: application/json" -X POST http://167.99.74.49/messages -d '{"name": "Ignasi", "ecg": """+str(x[0])+""", "mean_eda": """+str(x[1])+""", "mean_acc": """+str(x[2])+""", "maxmin_eda": """+str(x[3])+""", "maxmin_acc": """+str(x[4])+"""}' """)

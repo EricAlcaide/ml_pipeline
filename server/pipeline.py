@@ -22,5 +22,7 @@ print(result)
 
 result[result > 0.75] = 1
 result[result <= 0.75] = 0
+
+mr_doctor = {1: "Keep Calm and enjoy the Hackathon.", 0: "You seem to be doing well."}
 # Es un array 1 element
-print(result)
+print(result, mr_doctor[int(np.sum(result))])
