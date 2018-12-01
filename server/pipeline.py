@@ -14,16 +14,13 @@ model_file = "model.h5"
 # First get raw chunk. Delete lines and columns
 x = [] # ecg, mean_eda, mean_acc, maxmin_eda, maxmin_acc
 
-# Process data
-x = sum_up(destin, label=9)[1:]
-
 # Predict data
 network = Model(model_file)
 result = network.predict(np.array([x]))
 
 print(result)
 
-result[result > 0.5] = 1
-result[result <= 0.5] = 0
-
+result[result > 0.75] = 1
+result[result <= 0.75] = 0
+# Es un array 1 element
 print(result)

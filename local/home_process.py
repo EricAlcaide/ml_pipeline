@@ -8,8 +8,7 @@ origin = "data.txt"
 destin = "sample.txt"
 
 # execute data gathering
-# os.system("""python bitalino_hack.py /dev/tty.BITalino-39-96-DevB 10 "2;3;5" 100 10 ./"""+origin)
-
+# os.system("""python bitalino_hack.py /dev/tty.BITalino-39-96-DevB 10 "2;3;5" 100 10 ./"""+origin)
 
 # preprocess data
 with open(origin, 'r') as fin:
