@@ -27,5 +27,5 @@ frame.to_csv(destin, sep=",", header=["ecg", "eda", "acc"])
 x = sum_up(destin, label=9)[1:]
 print(x)
 # execute data gathering
-os.system("""curl -H "Content-Type: application/json" -X POST http://167.99.74.49/messages -d 
-		  '{"name": "Ignasi", "ecg": x[0], "mean_eda": x[1], "mean_acc": x[2], "maxmin_eda": x[3], "maxmin_acc": x[4]}' """)
+os.system("""curl -H "Content-Type: application/json" -X POST http://167.99.74.49/messages -d '{"name": "Ignasi", "ecg": """+str(x[0])+""", "mean_eda": """+str(x[1])+""", "mean_acc": """+str(x[2])+""", "maxmin_eda": """+str(x[3])+""", "maxmin_acc": """+str(x[4])+"""}' """)
+# os.system("""curl -H "Content-Type: application/json" -X POST http://167.99.74.49/messages -d '{"name": "Ignasi", "ecg":{0}, "mean_eda":{1}, "mean_acc":{2}, "maxmin_eda":{3}, "maxmin_acc":{4}}' """.format(*x))
