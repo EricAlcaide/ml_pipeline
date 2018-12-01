@@ -6,9 +6,9 @@ np.random.seed(7)
 
 class Model():
 	def __init__(self, filename="model.h5"):
-		nn = load_model(filename)
+		self.nn = load_model(filename)
 
 	def predict(self, x):
 		# X must be 5 dimensional:
-		# ppm, mean_eda, mean_acc, maxmin_eda, maxmin_acc
-		return nn.predict(x)
+		# ppm, mean_eda, mean_acc, maxmin_eda, maxmin_acc )
+		return self.nn.predict(x)
