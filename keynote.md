@@ -1,4 +1,4 @@
-# Technology part
+# Technology
 
 ## Ignasi
 So let's talk about the technology powering our solution:
