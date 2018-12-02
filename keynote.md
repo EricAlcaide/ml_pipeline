@@ -9,7 +9,7 @@ In order to provide a better service and promote adhesion to the treatment and s
 
 ## Eric
 
-So he objective data is collected via a weareble with 3 sensors.
+So the objective data is collected via a weareble with 3 sensors.
 We collect the hearth rythm, the electrodermal activity and the movement in order to see if there's any vibration.
 Our product, then, integrates BigData, Machine Learning and Artificial Intelligence in order to provide reliable information to help the doctor make the best decision.
 
